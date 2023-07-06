@@ -1,0 +1,38 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-content: center;
+}
+
+main {
+  display: flex;
+  display: flex;
+  justify-content: center;
+  align-content: center;
+  flex-direction: column;
+  text-align: center;
+}
+
+ul {
+  list-style: none;
+  padding: 8%;
+}
+
+h1 {
+  padding: 3%;
+}
+
+h2 {
+  padding: 2%;
+}
+
+p {
+  padding: 2%;
+}
