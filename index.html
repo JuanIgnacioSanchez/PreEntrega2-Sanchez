@@ -4,27 +4,28 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="css/index.css" />
-    <script src="js/index.js"></script>
     <title>PRACTICA</title>
   </head>
   <body>
-    <main>
+    <header>
       <h1>Blizzard shopping</h1>
       <h2>Prendas en stock</h2>
-      <ul>
-        <li><b>1- </b> Camisa elegante 👚</li>
-        <li><b>2- </b> Remera casual 👕</li>
-        <li><b>3- </b> Remera musculosa 🎽</li>
-        <li><b>4- </b> Jean de gala 👖</li>
-        <li><b>5- </b> Sombrero de gala 🎩</li>
-        <li><b>6- </b> Zapatos de gala 👞</li>
-        <li><b>7- </b> Traje de baño 🩱</li>
-        <li><b>8- </b> Sandalias 🥿</li>
-        <li><b>9- </b> Zapatillas running 👟</li>
-      </ul>
-      <p>
-        Ejecuta el programa colocando "<b>comprarProducto()</b>" en la consola.
-      </p>
+      <div class="div-search">
+        <p class="lupa">🔎</p>
+        <input
+          id="input-search"
+          class="input-search"
+          type="text"
+          placeholder="Buscar producto..."
+        />
+      </div>
+    </header>
+    <main>
+      <a href="pages/carrito.html" class="emoji-carrito"
+        >🛒<span class="contadorCarrito">0</span></a
+      >
+      <div id="container" class="container"></div>
     </main>
+    <script src="js/index.js"></script>
   </body>
 </html>
