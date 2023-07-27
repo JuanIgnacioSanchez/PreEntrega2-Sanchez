@@ -66,18 +66,21 @@ function eliminarProductoDelCarrito(event) {
       carritoDeLS[
         index
       ].cantidad -= 1; /* Resta uno a la cantidad del producto */
-      (carritoDeLS[index].cantidad <= 0) &
+      if (carritoDeLS[index].cantidad <= 0) {
         carritoDeLS.splice(
           index,
           1
         ); /* Si la cantidad llega a cero o menos, se elimina el producto del carrito */
 
-      localStorage.setItem("carrito", JSON.stringify(carritoDeLS));
-      /* Vuelve a generar la lista de productos en el carrito después de actualizar la cantidad */
+        // Actualizar el almacenamiento local con el carrito actualizado
+        localStorage.setItem("carrito", JSON.stringify(carritoDeLS));
+      }
+
+      // Vuelve a generar la lista de productos en el carrito después de actualizar la cantidad o eliminar el producto
       generarFilasCarrito(carritoDeLS);
-      /* Actualiza el total del carrito después de eliminar o actualizar la cantidad del producto */
+      // Actualiza el total del carrito después de eliminar o actualizar la cantidad del producto
       mostrarTotalCarrito();
-      /* Actualiza el contador de productos en el carrito después de eliminar o actualizar la cantidad del producto */
+      // Actualiza el contador de productos en el carrito después de eliminar o actualizar la cantidad del producto
       cantidadCarrito();
     }
   }
@@ -86,11 +89,11 @@ function eliminarProductoDelCarrito(event) {
 /* Agregar el evento click a los botones de eliminar productos */
 document.addEventListener("click", eliminarProductoDelCarrito);
 
-carritoLSnumero & cantidadCarrito();
+/* carritoLSnumero & cantidadCarrito(); */
 
-/* if (carritoLSnumero) {
+if (carritoLSnumero) {
   cantidadCarrito();
-} */
+}
 
 if (carritoDeLS) {
   generarFilasCarrito(carritoDeLS);
